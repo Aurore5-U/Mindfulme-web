@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mindcare-app
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
