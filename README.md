@@ -2,6 +2,19 @@
 
 **MindCare** is a simple Flask-based web application designed to help users track and manage their mental health. This app runs inside a Docker container for easy deployment.
 
+## 🌐 Live Deployed App
+
+> **Your app is deployed at:**
+> ### 👉 https://mindcare-app.onrender.com
+
+If the link above doesn't open correctly, follow these steps to find your exact URL:
+
+1. Go to [https://dashboard.render.com](https://dashboard.render.com) and sign in
+2. Click on the **mindcare-app** service in your dashboard
+3. The URL is shown at the top of the service page (e.g. `https://mindcare-app.onrender.com`)
+
+---
+
 ## Features
 
 * User-friendly interface for mental health check-ins
@@ -41,6 +54,27 @@
    ```
    http://localhost:5000
    ```
+
+## Deploying to the cloud (Render.com)
+
+This repository includes a `render.yaml` configuration and a GitHub Actions workflow for automatic deployment to [Render.com](https://render.com) (free tier).
+
+### First-time setup
+
+1. Create a free account at [https://render.com](https://render.com)
+2. Click **New → Web Service** and connect your GitHub repository
+3. Render will detect the `render.yaml` file automatically and configure the service
+4. Once deployed, your URL will be shown in the Render dashboard as:
+   ```
+   https://mindcare-app.onrender.com
+   ```
+5. Copy the URL from the Render dashboard and share it!
+
+### Automatic deployments
+
+After setup, every push to the `main` branch will automatically trigger a new deployment. You can follow the progress and see the live URL in:
+- The GitHub Actions tab of this repository
+- Your [Render dashboard](https://dashboard.render.com)
 
 ## Stopping the app
 

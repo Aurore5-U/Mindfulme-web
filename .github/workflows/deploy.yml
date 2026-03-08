@@ -1,0 +1,27 @@
+name: Deploy MindCare
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Render
+    runs-on: ubuntu-latest
+    permissions: {}
+
+    steps:
+      - name: Trigger Render deployment
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+
+      - name: Print deployed URL
+        run: |
+          echo "✅ Deployment triggered!"
+          echo "🌐 Your app will be live at: https://mindcare-app.onrender.com"
+          echo ""
+          echo "If the URL above doesn't work, find your exact URL by:"
+          echo "  1. Go to https://dashboard.render.com"
+          echo "  2. Select your service"
+          echo "  3. Copy the URL shown at the top of the service page"
