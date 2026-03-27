@@ -1,6 +1,6 @@
-# MindCare App
+# Mindfulme App
 
-**MindCare** is a simple Flask-based web application designed to help users track and manage their mental health. This app runs inside a Docker container for easy deployment.
+**Mindfulme** is a simple Flask-based web application designed to help users track and manage their mental health. This app runs inside a Docker container for easy deployment.
 
 ## Features
 
